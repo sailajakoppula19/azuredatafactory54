@@ -15,15 +15,12 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"dataset": {
-						"referenceName": "DelimitedText4",
-						"type": "DatasetReference"
-					},
 					"fieldList": [
 						"childItems"
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
