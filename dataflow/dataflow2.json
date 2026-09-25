@@ -37,7 +37,7 @@
 				"     ignoreNoFilesFound: false) ~> source1",
 				"source1 pivot(groupBy(ID),",
 				"     pivotBy(Product),",
-				"     totalsales = sum(Sales),",
+				"     {} = sum(Sales),",
 				"     columnNaming: '$N$V',",
 				"     lateral: true) ~> pivot1",
 				"pivot1 sink(allowSchemaDrift: true,",
