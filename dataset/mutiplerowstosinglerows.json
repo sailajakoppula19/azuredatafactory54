@@ -1,0 +1,29 @@
+{
+	"name": "mutiplerowstosinglerows",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkedservice01",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "multiplerowsintosinglerow.txt",
+				"folderPath": "sourcecontainer54",
+				"fileSystem": "datalakecontainer54"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ID,Product,Sales",
+				"type": "String"
+			}
+		]
+	}
+}
