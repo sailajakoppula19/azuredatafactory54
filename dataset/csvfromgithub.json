@@ -1,0 +1,22 @@
+{
+	"name": "csvfromgithub",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "githublinkedservice",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "kurma-ravi/b6-adf-files/refs/heads/main/sales_invoice.csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

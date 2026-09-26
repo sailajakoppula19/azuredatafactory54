@@ -1,0 +1,40 @@
+{
+	"name": "DelimitedText7",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkedservice01",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "destinationcontainer54",
+				"fileSystem": "datalakecontainer54"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ID",
+				"type": "String"
+			},
+			{
+				"name": "Mobile",
+				"type": "String"
+			},
+			{
+				"name": "Refrigerator",
+				"type": "String"
+			},
+			{
+				"name": "Washing machine",
+				"type": "String"
+			}
+		]
+	}
+}
