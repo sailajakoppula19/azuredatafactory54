@@ -11,11 +11,15 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'linkedservice01'"
 		},
+		"githublinkedservice_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/"
+		},
 		"linkedservice01_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://datalakestorage54.dfs.core.windows.net/"
 		},
-		"HttpServer1_properties_typeProperties_url": {
+		"linkedservicegithub_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://raw.githubusercontent.com/"
 		},
@@ -49,11 +53,14 @@
 					"linkedservice01_accountKey": {
 						"value": "[parameters('linkedservice01_accountKey')]"
 					},
+					"githublinkedservice_properties_typeProperties_url": {
+						"value": "[parameters('githublinkedservice_properties_typeProperties_url')]"
+					},
 					"linkedservice01_properties_typeProperties_url": {
 						"value": "[parameters('linkedservice01_properties_typeProperties_url')]"
 					},
-					"HttpServer1_properties_typeProperties_url": {
-						"value": "[parameters('HttpServer1_properties_typeProperties_url')]"
+					"linkedservicegithub_properties_typeProperties_url": {
+						"value": "[parameters('linkedservicegithub_properties_typeProperties_url')]"
 					}
 				}
 			},

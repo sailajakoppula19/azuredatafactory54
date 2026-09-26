@@ -8,10 +8,13 @@
 		"linkedservice01_accountKey": {
 			"value": ""
 		},
+		"githublinkedservice_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/"
+		},
 		"linkedservice01_properties_typeProperties_url": {
 			"value": "https://datalakestorage54.dfs.core.windows.net/"
 		},
-		"HttpServer1_properties_typeProperties_url": {
+		"linkedservicegithub_properties_typeProperties_url": {
 			"value": "https://raw.githubusercontent.com/"
 		}
 	}
