@@ -5,12 +5,20 @@
 		"typeProperties": {
 			"sources": [
 				{
-					"name": "source1"
+					"dataset": {
+						"referenceName": "multirowstosinglerow",
+						"type": "DatasetReference"
+					},
+					"name": "sourcedata123"
 				}
 			],
 			"sinks": [
 				{
-					"name": "sink1"
+					"dataset": {
+						"referenceName": "destmultirowstosinglerow",
+						"type": "DatasetReference"
+					},
+					"name": "destination"
 				}
 			],
 			"transformations": [
@@ -25,18 +33,26 @@
 				"          Sales as integer",
 				"     ),",
 				"     allowSchemaDrift: true,",
-				"     validateSchema: false) ~> source1",
-				"source1 pivot(groupBy(ID),",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> sourcedata123",
+				"sourcedata123 pivot(groupBy(ID),",
 				"     pivotBy(Product),",
 				"     {} = sum(Sales),",
 				"     columnNaming: '$N$V',",
 				"     lateral: true) ~> pivot1",
 				"pivot1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true,",
+				"     input(",
+				"          Employee_ID as string,",
+				"          First_Name as string,",
+				"          Salary as string,",
+				"          Location as string",
+				"     ),",
+				"     umask: 0022,",
 				"     preCommands: [],",
-				"     postCommands: []) ~> sink1"
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> destination"
 			]
 		}
 	}
