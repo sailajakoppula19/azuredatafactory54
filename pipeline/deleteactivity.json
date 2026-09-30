@@ -1,10 +1,10 @@
 {
-	"name": "getmetadataactivity",
+	"name": "deleteactivity",
 	"properties": {
 		"activities": [
 			{
-				"name": "Get Metadata1",
-				"type": "GetMetadata",
+				"name": "deleteactivity",
+				"type": "Delete",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -16,25 +16,25 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "getmetadata",
+						"referenceName": "deleteactivity",
 						"type": "DatasetReference"
 					},
-					"fieldList": [
-						"childItems"
-					],
+					"logStorageSettings": {
+						"linkedServiceName": {
+							"referenceName": "linkedservice01",
+							"type": "LinkedServiceReference"
+						},
+						"path": "datalakecontainer54/reportingcontainer"
+					},
+					"enableLogging": true,
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
 						"recursive": true,
 						"enablePartitionDiscovery": false
-					},
-					"formatSettings": {
-						"type": "DelimitedTextReadSettings"
 					}
 				}
 			}
 		],
-		"annotations": [],
-		"lastPublishTime": "2026-09-24T10:14:58Z"
-	},
-	"type": "Microsoft.DataFactory/factories/pipelines"
+		"annotations": []
+	}
 }

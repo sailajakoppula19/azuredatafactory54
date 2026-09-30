@@ -1,0 +1,19 @@
+{
+	"name": "deleteactivity",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkedservice01",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "employees.csv",
+				"folderPath": "source_container",
+				"fileSystem": "datalakecontainer54"
+			}
+		}
+	}
+}

@@ -1,9 +1,9 @@
 {
-	"name": "getmetadataactivity",
+	"name": "lookupactivity",
 	"properties": {
 		"activities": [
 			{
-				"name": "Get Metadata1",
+				"name": "getmetadata",
 				"type": "GetMetadata",
 				"dependsOn": [],
 				"policy": {
@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "getmetadata",
+						"referenceName": "lookupactivity",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
@@ -24,7 +24,6 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
-						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -33,8 +32,6 @@
 				}
 			}
 		],
-		"annotations": [],
-		"lastPublishTime": "2026-09-24T10:14:58Z"
-	},
-	"type": "Microsoft.DataFactory/factories/pipelines"
+		"annotations": []
+	}
 }
